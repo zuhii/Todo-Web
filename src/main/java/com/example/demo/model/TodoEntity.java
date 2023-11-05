@@ -16,13 +16,13 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name = "todo")
+@Table(name = "Todo")
 public class TodoEntity {
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name="system-uuid", strategy = "uuid")
     private String id; //오브젝트의 아이디
-    private String userId; //오브젝트를 생성한 사용잦의 아이디
+    private String userId; //오브젝트를 생성한 사용자의 아이디
     private String title; //Todo타이틀 (ex:운동하기)
     private boolean done; //true - todo를 완료한 경우(checked)
 }
